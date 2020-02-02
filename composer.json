@@ -1,0 +1,23 @@
+{
+    "name": "wandodin/tasklist",
+    "description": "Simple MVC Application Without a Framework for Task managing",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vasyleha Oleksandr",
+            "email": "wandodin@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^2.12",
+        "monolog/monolog": "^2.0",
+        "tightenco/collect": "^6.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "TaskList\\": "src/"
+        }
+    }
+}

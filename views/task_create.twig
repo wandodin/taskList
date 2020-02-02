@@ -1,0 +1,50 @@
+{% extends 'layout.twig' %}
+
+{% block title %}
+    Новая Задача
+{% endblock %}
+
+{% block header %}
+    Привет, {{ user }}!
+{% endblock %}
+
+{% block subheader %}
+    Новая Задача
+{% endblock %}
+
+{% block content %}
+    {% if form %}
+    {% if errorMessage is defined %}
+    <div class="alert alert-danger" role="alert">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+    {% endif %}
+    <form action="/task/create/" method="post" novalidate>
+      <div class="form-group">
+        <label for="username">Имя Пользователя</label>
+        <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="{{ email }}">
+      </div>
+      <div class="form-group">
+        <label for="content">Текст задачи</label>
+        <textarea rows="3" class="form-control" id="content" name="content">{{ content }}</textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Создать</button>
+    </form>
+    {% else %}
+    {% if errorMessage is defined %}
+    <div class="alert alert-danger" role="alert">
+        <strong>{{ errorMessage }}</strong>
+    </div>
+    {% endif %}
+    {% if successMessage is defined %}
+    <div class="alert alert-success" role="alert">
+        <strong>{{ successMessage }}</strong>
+    </div>
+    {% endif %}    
+    {% endif %}
+
+{% endblock %}

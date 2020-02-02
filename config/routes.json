@@ -1,0 +1,43 @@
+{
+  "tasks/:page": {
+    "controller": "Task",
+    "method": "getAllWithPage",
+    "params": {
+      "page": "number"
+    }
+  },
+  "": {
+    "controller": "Task",
+    "method": "getAll"
+  },
+  "tasks/": {
+    "controller": "Task",
+    "method": "getAll"
+  },
+  "task/:id": {
+    "controller": "Task",
+    "method": "get",
+    "params": {
+      "id": "number"
+    }
+  },
+  "task/create/": {
+    "controller": "Task",
+    "method": "create"
+  },
+  "task/edit/:id": {
+    "controller": "Task",
+    "method": "edit",
+    "params": {
+      "id": "number"
+    }
+  },
+  "user/login/": {
+    "controller": "User",
+    "method": "login"
+  },
+  "user/logout/": {
+    "controller": "User",
+    "method": "logout"
+  }
+}
