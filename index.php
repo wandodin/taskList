@@ -13,8 +13,8 @@ require_once (__DIR__) . '/vendor/autoload.php';
 $config = new Config();
 $tasksFile = realpath($config->get('tasks'));
 
-$loader = new Twig_Loader_Filesystem((__DIR__) . '/views');
-$view = new Twig_Environment($loader);
+$loader = new Twig\Loader\FilesystemLoader((__DIR__) . '/views');
+$view = new Twig\Environment($loader);
 
 $log = new Logger('tasklist');
 $logFile = $config->get('log');
