@@ -25,7 +25,7 @@ abstract class AbstractController {
 
         $this->file = $di->get('File');
         $this->log = $di->get('Logger');
-        $this->view = $di->get('Twig_Environment');
+        $this->view = $di->get('Twig');
         $this->config = $di->get('Utils\Config');
         $cookies = $this->request->getCookies();
         $this->auth = $cookies->has('user');

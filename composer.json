@@ -11,9 +11,9 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "twig/twig": "^3.0.4",
-        "monolog/monolog": "^2.0",
-        "tightenco/collect": "^6.13"
+        "twig/twig": "^3.0",
+        "monolog/monolog": "^2.1",
+        "tightenco/collect": "^6.18"
     },
     "autoload": {
         "psr-4": {

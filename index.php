@@ -22,7 +22,7 @@ $log->pushHandler(new StreamHandler($logFile, Logger::DEBUG));
 
 $di = new DependencyInjector();
 $di->set('Utils\Config', $config);
-$di->set('Twig_Environment', $view);
+$di->set('Twig', $view);
 $di->set('Logger', $log);
 $di->set('File', $tasksFile);
 
